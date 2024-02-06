@@ -13,8 +13,8 @@ export async function generateStaticParams() {
 }
 
 async function getTicket(id) {
-  //imitate delay to test loading screen
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // //imitate delay to test loading screen
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   const res = await fetch("http://localhost:4000/tickets/" + id, {
     next: {
