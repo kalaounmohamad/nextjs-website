@@ -4,15 +4,15 @@
 
 /* base styles */
 body {
-  background: #ebf0fa;
-  @apply text-gray-500 m-8;
+  background: #f4ebfa;
+  @apply text-gray-500 m-4 sm:m-8;
 }
 h1,
 h2 {
   @apply font-bold text-primary text-lg;
 }
 main {
-  @apply max-w-5xl my-12 mx-auto px-8;
+  @apply max-w-5xl sm:mt-8 mt-6 mb-6 mx-auto;
 }
 main > h2 {
   @apply mb-4 pb-2 text-base;
@@ -25,8 +25,8 @@ p > a {
 nav {
   @apply pb-4
     border-b-2 border-gray-200
-    flex items-center gap-5 
-    my-10 mx-auto 
+    flex items-center gap-5
+    mt-10 mx-auto 
     max-w-5xl;
 }
 nav a,
