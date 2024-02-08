@@ -36,6 +36,11 @@ nav span {
 nav a:hover {
   @apply text-black;
 }
+
+footer a:hover {
+  @apply text-black;
+}
+
 main nav {
   @apply border-0;
 }
