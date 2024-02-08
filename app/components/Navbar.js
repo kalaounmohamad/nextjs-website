@@ -40,7 +40,7 @@ export default function Navbar() {
         id="nav-links-2"
         className={`  ${
           menuSet
-            ? "sm:hidden p-4 absolute  text-white w-11/12 gap-0 text-right max-w-xl border-b-2 border-gray-200"
+            ? "sm:hidden p-4 absolute  text-white w-11/12 gap-0 text-left max-w-xl border-b-2 border-gray-200"
             : "hidden"
         }`}
         style={{ backgroundColor: "#04AA6D" }}
