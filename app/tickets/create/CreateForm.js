@@ -34,9 +34,40 @@ export default function CreateForm() {
   //   }
   // };
 
+  const generateId = () => {
+    return Date.now(); // Generate a unique ID based on current timestamp
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const newTicket = {
+      id: generateId(),
+      title,
+      body,
+      priority,
+      user_email: "kalaounmohamad@hotmail.com",
+    };
+
+    // Retrieve existing tickets array from local storage or initialize as empty array
+    const existingTickets = JSON.parse(localStorage.getItem("tickets")) || [];
+
+    // Add new ticket to the existing tickets array
+    const updatedTickets = [...existingTickets, newTicket];
+
+    // Store updated tickets array in local storage
+    localStorage.setItem("tickets", JSON.stringify(updatedTickets));
+
+    // Simulated fetch for demonstration purposes
+    setTimeout(() => {
+      setIsLoading(false);
+      router.push("/tickets"); // Navigate to the tickets page
+    }, 2000);
+  };
+
   return (
-    // <form onSubmit={handleSubmit} className="w-1/2">
-    <form className="w-full md:w-3/4 lg:w-1/2">
+    <form onSubmit={handleSubmit} className="w-full md:w-3/4 lg:w-1/2">
       <label>
         <span>Title:</span>
         <input

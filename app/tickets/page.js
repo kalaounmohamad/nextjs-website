@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import TicketList from "./TicketList";
+import TicketsList from "./TicketsList";
 import Loading from "../loading";
 import Link from "next/link";
 
@@ -9,15 +9,12 @@ export default function Tickets() {
       <nav>
         <div>
           <h2>Tickets</h2>
-          <p>
-            <small>Currently open tickets.</small>
-          </p>
         </div>
       </nav>
       {/* suspense is made to make a loading just for a particular part of the
       page */}
       <Suspense fallback={<Loading />}>
-        <TicketList />
+        <TicketsList />
         <div className="flex justify-left my-8">
           <Link href="/tickets/create">
             <button className="btn-primary">Create a new Ticket</button>

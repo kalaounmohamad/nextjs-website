@@ -8,7 +8,9 @@ import X from "./X.png";
 export default function Footer() {
   return (
     <footer>
-      <div class="max-w-5xl mx-auto border-t-2 border-gray-200 py-5 sm:flex sm:flex-row sm:justify-between sm:items-center sm:flex-wrap grid grid-cols-2 grid-rows-2">
+      <div class="max-w-5xl mx-auto border-t-2 border-gray-200 py-5 flex flex-row justify-between items-center flex-wrap">
+        {/* <div class="max-w-5xl mx-auto border-t-2 border-gray-200 py-5 sm:flex sm:flex-row sm:justify-between sm:items-center sm:flex-wrap grid grid-cols-2 grid-rows-2"> */}
+
         <Link href="/">
           <Image
             src={Logo}

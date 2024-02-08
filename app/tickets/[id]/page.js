@@ -1,51 +1,48 @@
-import { notFound } from "next/navigation";
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
-// export const dynamicParams = true;
+export default function TicketDetail({ params }) {
+  const id = params.id;
+  const [ticket, setTicket] = useState(null);
 
-// export async function generateStaticParams() {
-//   const res = await fetch("http://localhost:4000/tickets");
+  useEffect(() => {
+    const fetchTicketFromLocalStorage = () => {
+      const storedTickets = JSON.parse(localStorage.getItem("tickets")) || [];
+      const foundTicket = storedTickets.find(
+        (ticket) => ticket.id === parseInt(id)
+      );
+      setTicket(foundTicket);
+    };
 
-//   const tickets = await res.json();
+    if (id) {
+      fetchTicketFromLocalStorage();
+    }
+  }, [id]);
 
-//   return tickets.map((ticket) => ({
-//     id: ticket.id,
-//   }));
-// }
-
-async function getTicket(id) {
-  // //imitate delay to test loading screen
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
-
-  // const res = await fetch("http://localhost:4000/tickets/" + id, {
-  //   next: {
-  //     revalidate: 60,
-  //   },
-  // });
-
-  // if (!res.ok) {
-  //   notFound();
-  // }
-
-  // return res.json();
-  return null;
-}
-
-export default async function TicketDetails({ params }) {
-  // const ticket = await getTicket(params.id);
   return (
-    <></>
-    // <main>
-    //   <nav>
-    //     <h2>Ticket Details</h2>
-    //   </nav>
-    //   <div className="card">
-    //     <h3>{ticket.title}</h3>
-    //     <small>Created by {ticket.user_email}</small>
-    //     <p>{ticket.body}</p>
-    //     <div className={`pill ${ticket.priority}`}>
-    //       {ticket.priority} priority
-    //     </div>
-    //   </div>
-    // </main>
+    <main>
+      <nav>
+        <h2>Ticket Details</h2>
+      </nav>
+      {ticket ? (
+        <div className="card">
+          <h3>{ticket.title}</h3>
+          <small>Created by {ticket.user_email}</small>
+          <p>{ticket.body}</p>
+          <div className={`pill ${ticket.priority}`}>
+            {ticket.priority} priority
+          </div>
+        </div>
+      ) : (
+        <main className="text-center">
+          <h2 className="text-3xl">We hit a brick wall.</h2>
+          <p>We could not find the Ticket you were looking for</p>
+          <p>
+            Go back to see all the <Link href="/tickets">Tickets</Link>
+          </p>
+        </main>
+      )}
+    </main>
   );
 }
