@@ -11,31 +11,32 @@ export default function CreateForm() {
   const [priority, setPriority] = useState("low");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsLoading(true);
 
-    const newTicket = {
-      title,
-      body,
-      priority,
-      user_email: "kalaounmohamad@hotmail.com",
-    };
+  //   const newTicket = {
+  //     title,
+  //     body,
+  //     priority,
+  //     user_email: "kalaounmohamad@hotmail.com",
+  //   };
 
-    const res = await fetch("http://localhost:4000/tickets", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newTicket),
-    });
+  //   const res = await fetch("http://localhost:4000/tickets", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(newTicket),
+  //   });
 
-    if (res.status === 201) {
-      router.refresh();
-      router.push("/tickets");
-    }
-  };
+  //   if (res.status === 201) {
+  //     router.refresh();
+  //     router.push("/tickets");
+  //   }
+  // };
 
   return (
-    <form onSubmit={handleSubmit} className="w-1/2">
+    // <form onSubmit={handleSubmit} className="w-1/2">
+    <form className="w-1/2">
       <label>
         <span>Title:</span>
         <input
