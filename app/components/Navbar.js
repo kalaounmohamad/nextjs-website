@@ -13,7 +13,7 @@ export default function Navbar() {
     console.log("clicked");
   };
   return (
-    <>
+    <div>
       <nav class="max-w-5xl mx-auto flex justify-between items-center mt-10 gap-0">
         <Link href="/">
           <Image
@@ -40,9 +40,10 @@ export default function Navbar() {
         id="nav-links-2"
         className={`  ${
           menuSet
-            ? "sm:hidden max-w-5xl mx-auto border-b-2 border-gray-200"
+            ? "sm:hidden p-4 absolute  text-white w-11/12 gap-0 text-right max-w-xl border-b-2 border-gray-200"
             : "hidden"
         }`}
+        style={{ backgroundColor: "#04AA6D" }}
       >
         {/* className="hidden sm:hidden max-w-5xl mx-auto border-b-2 border-gray-200" */}
         {/* class="hidden sm:hidden" */}
@@ -55,6 +56,6 @@ export default function Navbar() {
           </Link>
         </ul>
       </div>
-    </>
+    </div>
   );
 }

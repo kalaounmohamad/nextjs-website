@@ -8,7 +8,7 @@ import X from "./X.png";
 export default function Footer() {
   return (
     <footer>
-      <div class="max-w-5xl mx-auto border-t-2 border-gray-200 py-5 flex flex-col justify-between items-center sm:flex-row">
+      <div class="max-w-5xl mx-auto border-t-2 border-gray-200 py-5 sm:flex sm:flex-row sm:justify-between sm:items-center sm:flex-wrap grid grid-cols-2 grid-rows-2">
         <Link href="/">
           <Image
             src={Logo}
@@ -18,15 +18,15 @@ export default function Footer() {
             placeholder="blur"
           />
         </Link>
-        <div class="footer-links my-3 space-x-0 sm:space-x-4 flex flex-col sm:flex-row">
-          <a href="#" class=" mx-auto  flex">
+        <div class="footer-links m-3 flex flex-col sm:flex-row flex-wrap sm:space-x-4">
+          <a href="#" class=" ml-auto   ">
             Privacy Policy
           </a>
-          <a href="#" class=" mx-auto mt-2 sm:mt-0  flex">
+          <a href="#" class=" ml-auto ">
             Terms of Service
           </a>
         </div>
-        <div class="social-icons flex">
+        <div class="social-icons flex mt-4 sm:mt-0">
           <a href="https://www.facebook.com" target="_blank" class="mr-4">
             <Image src={Facebook} alt="Facebook Icon" class="w-8" />
           </a>

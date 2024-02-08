@@ -15,9 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
+      <body className={rubik.className + " flex flex-col min-h-screen"}>
         <Navbar />
-        {children}
+        <div className="flex-grow">{children}</div>
         <Footer />
       </body>
     </html>
