@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./creoshift_logo.jpg";
 import { useState } from "react";
-import { FaTimes } from "react-icons/fa";
-import { FiMenu } from "react-icons/fi";
+import FaTimes from "./x-icon.svg";
+import FiMenu from "./menu-icon.svg";
 
 export default function Navbar() {
   const [menuSet, setMenuSet] = useState(false);
@@ -24,13 +24,28 @@ export default function Navbar() {
             placeholder="blur"
           />
         </Link>
-        {menuSet ? (
+        {/* {menuSet ? (
           <FaTimes
             className="sm:hidden block h-6 w-6 cursor-pointer"
             onClick={toggleMenu}
           />
         ) : (
           <FiMenu
+            className="sm:hidden block h-6 w-6 cursor-pointer"
+            onClick={toggleMenu}
+          />
+        )} */}
+        {menuSet ? (
+          <Image
+            src={FaTimes}
+            alt="Close menu"
+            className="sm:hidden block h-6 w-6 cursor-pointer"
+            onClick={toggleMenu}
+          />
+        ) : (
+          <Image
+            src={FiMenu}
+            alt="Open menu"
             className="sm:hidden block h-6 w-6 cursor-pointer"
             onClick={toggleMenu}
           />
