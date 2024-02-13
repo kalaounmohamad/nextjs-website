@@ -76,14 +76,14 @@ export default function Navbar() {
               ? " absolute sm:relative top-0 z-10 pt-8 h-screen"
               : // ? " absolute sm:relative top-28 sm:top-auto"
                 "hidden"
-          } w-full sm:flex sm:items-center sm:w-auto bg-[#04AA6D] sm:bg-[#f4ebfa]`}
+          } w-full px-4 -ml-4 sm:flex sm:items-center sm:w-auto bg-[#04AA6D] sm:bg-[#f4ebfa]`}
         >
-          <ul class="text-base sm:flex sm:justify-between gap-5 ">
+          <ul class="text-base sm:flex sm:justify-between ">
             <li>
               <Link
                 href="/"
                 onClick={closeMenu}
-                className=" block font-semibold text-white sm:text-gray-500"
+                className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
               >
                 Dashboard
               </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
               <Link
                 href="/tickets"
                 onClick={closeMenu}
-                className=" block font-semibold text-white sm:text-gray-500"
+                className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
               >
                 Tickets
               </Link>
