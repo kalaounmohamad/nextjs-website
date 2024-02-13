@@ -33,8 +33,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div>
-      <nav class="max-w-5xl mx-auto flex justify-between items-center mt-4 sm:mt-8 flex-wrap w-full">
+    <div className="mx-4 sm:mx-8">
+      <nav class="max-w-screen-xl mx-auto flex justify-between items-center mt-4 sm:mt-8 flex-wrap w-full">
         <Link href="/">
           <Image
             src={Logo}
