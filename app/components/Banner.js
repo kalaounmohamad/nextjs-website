@@ -4,7 +4,7 @@ export default function Banner() {
 
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
+      className="bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center -mx-4 sm:-mx-8"
       style={{
         backgroundImage: `url(/banner.jpg)`,
         height: bannerHeight,
