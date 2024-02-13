@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "./creoshift_logo.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import FaTimes from "./x-icon.svg";
 // import FiMenu from "./menu-icon.svg";
 
@@ -18,6 +18,17 @@ export default function Navbar() {
     setMenuSet(false);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 640) {
+        setMenuSet(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
       <nav class="max-w-5xl mx-auto flex justify-between items-center mt-4 sm:mt-8 flex-wrap w-full">
@@ -27,7 +38,7 @@ export default function Navbar() {
             alt="Creoshift logo"
             width={70}
             loading="eager"
-            className="hover:scale-110"
+            className="hover:opacity-75"
           />
         </Link>
         {/* {menuSet ? (
@@ -76,14 +87,14 @@ export default function Navbar() {
               ? " absolute sm:relative top-0 z-10 pt-8 h-screen"
               : // ? " absolute sm:relative top-28 sm:top-auto"
                 "hidden"
-          } w-full px-4 -ml-4 sm:flex sm:items-center sm:w-auto bg-[#04AA6D] sm:bg-[#f4ebfa]`}
+          } w-full  px-4 sm:px-0 -ml-4 sm:ml-0  sm:flex sm:items-center sm:w-auto bg-[#04AA6D] sm:bg-[#f4ebfa]`}
         >
-          <ul class="text-base sm:flex sm:justify-between ">
+          <ul class="text-base sm:flex sm:justify-between gap-5 space-y-4 sm:space-y-0">
             <li>
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
+                className="block font-semibold text-white sm:text-gray-500"
               >
                 Dashboard
               </Link>
@@ -92,7 +103,7 @@ export default function Navbar() {
               <Link
                 href="/tickets"
                 onClick={closeMenu}
-                className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
+                className="block font-semibold text-white sm:text-gray-500"
               >
                 Tickets
               </Link>
