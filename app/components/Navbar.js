@@ -4,11 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./creoshift_logo.jpg";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 // import FaTimes from "./x-icon.svg";
 // import FiMenu from "./menu-icon.svg";
 
 export default function Navbar() {
   const [menuSet, setMenuSet] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setMenuSet(!menuSet);
@@ -94,7 +97,10 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="block font-semibold text-white sm:text-gray-500"
+                // className="block font-semibold text-white sm:text-gray-500"
+                className={`block font-semibold text-white sm:text-gray-500 ${
+                  pathname === "/" ? "underline" : ""
+                }`}
               >
                 Dashboard
               </Link>
@@ -103,7 +109,10 @@ export default function Navbar() {
               <Link
                 href="/tickets"
                 onClick={closeMenu}
-                className="block font-semibold text-white sm:text-gray-500"
+                // className="block font-semibold text-white sm:text-gray-500"
+                className={`block font-semibold text-white sm:text-gray-500 ${
+                  pathname === "/tickets" ? "underline" : ""
+                }`}
               >
                 Tickets
               </Link>
