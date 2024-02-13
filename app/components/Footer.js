@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "./creoshift_logo.jpg";
-import Instagram from "./instagram.jpeg";
+import Instagram from "./instagram.png";
 import Facebook from "./facebook.png";
 import X from "./X.png";
 
@@ -16,8 +16,8 @@ export default function Footer() {
             src={Logo}
             alt="Creoshift logo"
             width={70}
-            height={70}
-            placeholder="blur"
+            loading="eager"
+            className="hover:scale-110"
           />
         </Link>
         <div class="footer-links m-3 flex flex-col sm:flex-row flex-wrap sm:space-x-4">

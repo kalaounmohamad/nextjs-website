@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function CreateForm() {
   const router = useRouter();
@@ -75,6 +76,7 @@ export default function CreateForm() {
           type="text"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
+          maxLength={200}
         />
       </label>
       <label>

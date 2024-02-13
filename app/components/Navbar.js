@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./creoshift_logo.jpg";
 import { useState } from "react";
-import FaTimes from "./x-icon.svg";
-import FiMenu from "./menu-icon.svg";
+// import FaTimes from "./x-icon.svg";
+// import FiMenu from "./menu-icon.svg";
 
 export default function Navbar() {
   const [menuSet, setMenuSet] = useState(false);
@@ -21,7 +21,8 @@ export default function Navbar() {
             src={Logo}
             alt="Creoshift logo"
             width={70}
-            placeholder="blur"
+            loading="eager"
+            className="hover:scale-110"
           />
         </Link>
         {/* {menuSet ? (
@@ -36,29 +37,47 @@ export default function Navbar() {
           />
         )} */}
         {menuSet ? (
-          <Image
-            src={FaTimes}
-            alt="Close menu"
-            className="sm:hidden block h-6 w-6 cursor-pointer"
+          // <Image
+          //   src={FaTimes}
+          //   alt="Close menu"
+          //   className="sm:hidden block h-6 w-6 cursor-pointer"
+          //   onClick={toggleMenu}
+          // />
+
+          <button
+            className="sm:hidden block  text-black cursor-pointer  z-20  text-3xl p-0 font-bold"
             onClick={toggleMenu}
-          />
+          >
+            ✕
+          </button>
         ) : (
-          <Image
-            src={FiMenu}
-            alt="Open menu"
-            className="sm:hidden block h-6 w-6 cursor-pointer"
+          <button
+            className="sm:hidden block text-black cursor-pointer text-3xl p-0 font-bold"
             onClick={toggleMenu}
-          />
+          >
+            ☰
+          </button>
+
+          // <Image
+          //   src={FiMenu}
+          //   alt="Open menu"
+          //   className="sm:hidden block h-6 w-6 cursor-pointer"
+          //   onClick={toggleMenu}
+          // />
         )}
         <div
           class={`${
-            menuSet ? " absolute sm:relative top-28 sm:top-auto" : "hidden"
+            menuSet
+              ? " absolute sm:relative top-0 z-10 pt-8 h-screen"
+              : // ? " absolute sm:relative top-28 sm:top-auto"
+                "hidden"
           } w-full px-4 -ml-4 sm:flex sm:items-center sm:w-auto bg-[#04AA6D] sm:bg-[#f4ebfa]`}
         >
           <ul class="text-base sm:flex sm:justify-between ">
             <li>
               <Link
                 href="/"
+                onClick={toggleMenu}
                 className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
               >
                 Dashboard
@@ -67,6 +86,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/tickets"
+                onClick={toggleMenu}
                 className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
               >
                 Tickets

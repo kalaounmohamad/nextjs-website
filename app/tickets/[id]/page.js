@@ -43,6 +43,11 @@ export default function TicketDetail({ params }) {
           </p>
         </main>
       )}
+      <div className="flex justify-left my-8">
+        <Link href="/tickets">
+          <button className="btn-primary">Back to tickets list</button>
+        </Link>
+      </div>
     </main>
   );
 }
