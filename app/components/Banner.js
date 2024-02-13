@@ -13,9 +13,7 @@ export default function Banner() {
       <h1 className="text-white text-4xl font-bold mb-4 text-center">
         Tickets Management
       </h1>
-      <button className="bg-primary text-white px-6 py-3 rounded-lg">
-        Learn More
-      </button>
+      <button className="btn-primary">Learn More</button>
     </div>
   );
 }
