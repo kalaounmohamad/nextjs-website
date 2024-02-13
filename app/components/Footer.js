@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "./creoshift_logo.jpg";
-import Instagram from "./instagram.png";
-import Facebook from "./facebook.png";
-import X from "./X.png";
+import Logo from "../img/creoshift_logo.jpg";
+import Instagram from "../img/instagram.png";
+import Facebook from "../img/facebook.png";
+import X from "../img/X.png";
 
 export default function Footer() {
   return (

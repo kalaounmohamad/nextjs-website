@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "./creoshift_logo.jpg";
+import Logo from "../img/creoshift_logo.jpg";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
