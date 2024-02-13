@@ -32,6 +32,11 @@ export default function Tickets() {
       ) : (
         <p className="text-center">No open tickets, good job!</p>
       )}
+      <div className="flex justify-left my-8">
+        <Link href="/">
+          <button className="btn-primary">Back to Dashboard</button>
+        </Link>
+      </div>
     </div>
   );
 }

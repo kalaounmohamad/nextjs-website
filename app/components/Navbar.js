@@ -13,6 +13,11 @@ export default function Navbar() {
   const toggleMenu = () => {
     setMenuSet(!menuSet);
   };
+
+  const closeMenu = () => {
+    setMenuSet(false);
+  };
+
   return (
     <div>
       <nav class="max-w-5xl mx-auto flex justify-between items-center mt-4 sm:mt-8 flex-wrap w-full">
@@ -77,7 +82,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/"
-                onClick={toggleMenu}
+                onClick={closeMenu}
                 className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
               >
                 Dashboard
@@ -86,7 +91,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/tickets"
-                onClick={toggleMenu}
+                onClick={closeMenu}
                 className="sm:px-5 py-2 block font-semibold text-white sm:text-gray-500"
               >
                 Tickets
