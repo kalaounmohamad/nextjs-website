@@ -23,14 +23,14 @@ export default function Tickets() {
       {/* Render the modal content conditionally */}
       {showModal && (
         <div className="fixed z-50 inset-0  bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-8 rounded-lg  mx-auto w-full sm:w-11/12 md:w-3/4 lg:w-1/2">
-            <CreateTicket />
+          <div className=" p-8 bg-gray-100 rounded-lg mx-auto   w-full sm:w-11/12 md:w-3/4 lg:w-1/2">
             <button
-              className="btn-secondary"
+              className="flex ml-auto btn-secondary  font-bold hover:bg-red-500"
               onClick={() => setShowModal(false)}
             >
-              Close
+              ✕
             </button>
+            <CreateTicket />
           </div>
         </div>
       )}
