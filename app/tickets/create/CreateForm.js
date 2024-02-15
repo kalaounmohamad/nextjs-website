@@ -68,7 +68,7 @@ export default function CreateForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full md:w-3/4 lg:w-1/2">
+    <form onSubmit={handleSubmit} className="w-full md:w-3/4 ">
       <label>
         <span>Title:</span>
         <input
@@ -95,10 +95,21 @@ export default function CreateForm() {
           <option value="high">High Priority</option>
         </select>
       </label>
-      <button className="btn-primary" disabled={isLoading}>
-        {isLoading && <span>Adding...</span>}
-        {!isLoading && <span>Add Ticket</span>}
-      </button>
+      <div className="flex justify-between items-center">
+        <div>
+          <button className="btn-primary" disabled={isLoading}>
+            {isLoading && <span>Adding...</span>}
+            {!isLoading && <span>Add Ticket</span>}
+          </button>
+        </div>
+        <div>
+          <Link href="/tickets">
+            <button className=" bg-gray-400 text-white py-1 px-3 hover:bg-red-500 ">
+              Cancel
+            </button>
+          </Link>
+        </div>
+      </div>
     </form>
   );
 }
