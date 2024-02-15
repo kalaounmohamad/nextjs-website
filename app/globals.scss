@@ -7,15 +7,19 @@ body {
   background: #f4ebfa;
   @apply text-gray-500 mx-4 sm:mx-8 ;
 }
-h1,
+
+h1 {
+  @apply font-bold text-primary text-2xl;
+}
+
 h2 {
-  @apply font-bold text-primary text-lg;
+  @apply font-bold text-primary text-xl;
 }
 main {
   @apply max-w-screen-xl   sm:mt-8 mt-6 mb-6 mx-auto;
 }
 main > h2 {
-  @apply mb-4 pb-2 text-base;
+  @apply mb-4 pb-2 ;
 }
 p > a {
   @apply text-primary underline;

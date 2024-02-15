@@ -19,7 +19,7 @@ export const ServiceData = [
     icon: RxCrop,
     title: "Development",
     content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
-    backgroundImage: "/SwiperImg/SpaceCity9.jpeg",
+    backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
   },
   {
     icon: RxPencil2,
@@ -31,13 +31,13 @@ export const ServiceData = [
     icon: RxDesktop,
     title: "Design",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: "/SwiperImg/SpaceCity6.jpeg",
+    backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
   },
   {
     icon: RxReader,
     title: "Seo",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: "/SwiperImg/SpaceCity7.jpeg",
+    backgroundImage: "/SwiperImg/SpaceCity1.jpg",
   },
   {
     icon: RxAccessibility,
@@ -49,6 +49,6 @@ export const ServiceData = [
     icon: RxRocket,
     title: "Production",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    backgroundImage: "/SwiperImg/SpaceCity8.jpeg",
+    backgroundImage: "/SwiperImg/SpaceCity1.jpg",
   },
 ];
