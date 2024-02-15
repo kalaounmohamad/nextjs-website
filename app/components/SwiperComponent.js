@@ -67,7 +67,7 @@ export default function SwiperComponent() {
         </Swiper>
         <RxArrowRight className="swiper-button-next hidden sm:block text-7xl self-center ml-3 cursor-pointer hover:scale-110" />
       </div>
-      <div className="custom-pagination my-3"></div>
+      <div className="custom-pagination mt-6"></div>
     </main>
   );
 }
