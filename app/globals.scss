@@ -139,3 +139,7 @@ form button {
   @apply absolute bottom-0 right-0 
     rounded-tl-md;
 }
+
+.swiper-pagination-bullet{
+  @apply scale-125 hover:scale-150  cursor-pointer;
+}
