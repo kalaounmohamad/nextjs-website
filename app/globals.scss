@@ -140,6 +140,11 @@ form button {
     rounded-tl-md;
 }
 
-.swiper-pagination-bullet{
-  @apply scale-125 hover:scale-150  cursor-pointer;
+.custom-pagination span{
+  @apply  size-3 hover:scale-125 hover:bg-green-300 bg-green-400 cursor-pointer;
+
 }
+
+// .swiper-pagination-bullet{
+//   @apply scale-125 hover:scale-150  cursor-pointer;
+// }
