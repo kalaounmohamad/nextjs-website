@@ -17,7 +17,7 @@ export default function SwiperComponent() {
       <h1>Our projects</h1>
       <p className="text-xl pb-8 pt-4">Each crafted with passion</p>
       <div className="flex flex-row justify-between h-[450px]">
-        <RxArrowLeft className="swiper-button-prev text-7xl self-center mr-3" />
+        <RxArrowLeft className="swiper-button-prev text-7xl self-center mr-3 cursor-pointer hover:scale-110" />
         <Swiper
           breakpoints={{
             450: {
@@ -64,7 +64,7 @@ export default function SwiperComponent() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <RxArrowRight className="swiper-button-next text-7xl self-center ml-3" />
+        <RxArrowRight className="swiper-button-next text-7xl self-center ml-3 cursor-pointer hover:scale-110" />
       </div>
     </main>
   );
