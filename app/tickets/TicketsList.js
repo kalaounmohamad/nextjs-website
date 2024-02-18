@@ -28,7 +28,27 @@ export default function Tickets() {
 
   return (
     <div>
-      <div className="flex gap-5">
+      <select
+        className="btn-filter sm:hidden mt-4 p-2"
+        value={selectedPriority}
+        onChange={(e) => setSelectedPriority(e.target.value)}
+      >
+        <option value="all" className="text-xs">
+          All
+        </option>
+        <option value="low" className="text-xs">
+          Low Priority
+        </option>
+        <option value="medium" className="text-xs">
+          Medium Priority
+        </option>
+        <option value="high" className="text-xs">
+          High Priority
+        </option>
+      </select>
+      <div className="hidden sm:flex gap-5  my-4">
+        {/* On small screens I want a dropdown */}
+        {/* On larger screens I want buttons */}
         <button
           className={`btn-filter hover:opacity-75  ${
             selectedPriority === "all" ? "btn-primary" : "btn-secondary"
@@ -63,7 +83,7 @@ export default function Tickets() {
         </button>
       </div>
       {selectedPriority !== "all" && filteredTickets.length === 0 && (
-        <p className="text-center">
+        <p className="text-center my-8">
           No open <b>{selectedPriority} priority </b>tickets, good job!
         </p>
       )}
