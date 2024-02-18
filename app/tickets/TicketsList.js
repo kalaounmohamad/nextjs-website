@@ -29,22 +29,14 @@ export default function Tickets() {
   return (
     <div>
       <select
-        className="btn-filter sm:hidden mt-4 p-2"
+        className="btn-filter sm:hidden mt-4 p-2 cursor-pointer"
         value={selectedPriority}
         onChange={(e) => setSelectedPriority(e.target.value)}
       >
-        <option value="all" className="text-xs">
-          All
-        </option>
-        <option value="low" className="text-xs">
-          Low Priority
-        </option>
-        <option value="medium" className="text-xs">
-          Medium Priority
-        </option>
-        <option value="high" className="text-xs">
-          High Priority
-        </option>
+        <option value="all">All</option>
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
       </select>
       <div className="hidden sm:flex gap-5  my-4">
         {/* On small screens I want a dropdown */}
