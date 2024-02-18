@@ -80,7 +80,7 @@ export default function Tickets() {
         </p>
       )}
       {selectedPriority === "all" && filteredTickets.length === 0 && (
-        <p className="text-center">No open tickets, good job!</p>
+        <p className="text-center my-8">No open tickets, good job!</p>
       )}
       {filteredTickets.length > 0 &&
         filteredTickets.map((ticket) => (
