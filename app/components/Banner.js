@@ -1,5 +1,5 @@
 export default function Banner() {
-  const navbarHeight = 120;
+  const navbarHeight = `window.innerWidth < 640` ? 104 : 120;
   const bannerHeight = `calc(100vh - ${navbarHeight}px)`;
 
   return (
