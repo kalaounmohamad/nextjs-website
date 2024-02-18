@@ -68,7 +68,8 @@ export default function CreateForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-100 w-full lg:w-10/12 ">
+    <form onSubmit={handleSubmit} className="bg-gray-100 w-full">
+      {/* <form onSubmit={handleSubmit} className="bg-gray-100 w-full lg:w-10/12 "> */}
       <label>
         <span>Title:</span>
         <input
@@ -96,7 +97,7 @@ export default function CreateForm() {
           <option value="high">High Priority</option>
         </select>
       </label>
-      <button className="btn-primary" disabled={isLoading}>
+      <button className="btn-primary mb-2" disabled={isLoading}>
         {isLoading && <span>Adding...</span>}
         {!isLoading && <span>Add Ticket</span>}
       </button>
