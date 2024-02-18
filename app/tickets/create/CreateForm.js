@@ -63,7 +63,8 @@ export default function CreateForm() {
     // Simulated fetch for demonstration purposes
     setTimeout(() => {
       setIsLoading(false);
-      router.push("/tickets"); // Navigate to the tickets page
+      // router.push("/tickets"); // Navigate to the tickets page
+      window.location.reload();
     }, 2000);
   };
 
