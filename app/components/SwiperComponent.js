@@ -16,7 +16,7 @@ export default function SwiperComponent() {
     <main className="justify-center items-center text-center">
       <h1>Our projects</h1>
       <p className="text-xl pb-8 pt-4">Each crafted with passion</p>
-      <div className="flex flex-row justify-between h-[250px] lg:h-[400px]">
+      <div className="flex flex-row justify-between h-[250px] sm:h-[300px] lg:h-[400px]">
         <RxArrowLeft className="swiper-button-prev hidden sm:block text-7xl self-center mr-3 cursor-pointer hover:scale-110" />
         <Swiper
           breakpoints={{
@@ -58,7 +58,11 @@ export default function SwiperComponent() {
                   <h1 className="text-white text-xl lg:text-2xl">
                     {item.title}
                   </h1>
-                  <p className="lg:text-lg my-auto">{item.content}</p>
+                  <p className="sm:absolute sm:top-1/2  sm:-translate-y-1/2 lg:text-lg my-auto ">
+                    {/* <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-lg "> */}
+
+                    {item.content}
+                  </p>
                 </div>
                 <RxArrowTopRight className="absolute bottom-5 left-5 w-9 h-9 text-white group-hover:text-green-500 group-hover:rotate-45 duration-100" />
               </div>
