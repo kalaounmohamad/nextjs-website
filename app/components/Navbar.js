@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav class="max-w-screen-xl mx-auto flex justify-between items-center mt-4 sm:mt-8 flex-wrap w-full">
+      <nav className="max-w-screen-xl mx-auto flex justify-between items-center mt-4 sm:mt-8 flex-wrap w-full">
         <Link href="/">
           <Image
             src={Logo}
@@ -85,14 +85,14 @@ export default function Navbar() {
           // />
         )}
         <div
-          class={`${
+          className={`${
             menuSet
               ? " absolute sm:relative top-0 z-10 pt-8 h-screen"
               : // ? " absolute sm:relative top-28 sm:top-auto"
                 "hidden"
           } w-full  px-4 sm:px-0 -ml-4 sm:ml-0  sm:flex sm:items-center sm:w-auto bg-[#04AA6D] sm:bg-[#f4ebfa]`}
         >
-          <ul class="text-base sm:flex sm:justify-between gap-5 space-y-4 sm:space-y-0">
+          <ul className="text-base sm:flex sm:justify-between gap-5 space-y-4 sm:space-y-0">
             <li>
               <Link
                 href="/"
