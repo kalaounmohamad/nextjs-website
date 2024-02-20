@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <main>
-      <h1 className="text-3xl text-center">Projects</h1>
+      <h1 className="text-3xl text-center mb-7">Projects</h1>
       <div className="flex flex-col gap-5 mt-4">
         {ProjectsDetails.map((item, index) => (
           <div
@@ -35,7 +35,7 @@ export default function Projects() {
                   <img
                     src={item.backgroundImage}
                     alt="Project Image"
-                    className="rounded-xl"
+                    className="rounded-xl w-full h-80 sm:h-96"
                   />
                 </div>
 
@@ -60,7 +60,7 @@ export default function Projects() {
                   <img
                     src={item.backgroundImage}
                     alt="Project Image"
-                    className="rounded-xl"
+                    className="rounded-xl w-full h-80 sm:h-96"
                   />
                 </div>
               </>
