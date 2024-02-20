@@ -117,6 +117,17 @@ export default function Navbar() {
                 Tickets
               </Link>
             </li>
+            <li>
+              <Link
+                href="/projects"
+                onClick={closeMenu}
+                className={`block font-semibold text-white sm:text-gray-500 ${
+                  pathname === "/projects" ? "underline" : ""
+                }`}
+              >
+                Projects
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

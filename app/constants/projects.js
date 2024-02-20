@@ -17,36 +17,42 @@ import SpaceCity9 from "../img/SwiperImg/SpaceCity9.jpeg";
 export const ServiceData = [
   {
     icon: RxCrop,
+    id: "Development",
     title: "Development",
     content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
     backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
   },
   {
     icon: RxPencil2,
+    id: "Branding",
     title: "Branding",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
   },
   {
     icon: RxDesktop,
+    id: "Design",
     title: "Design",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
   },
   {
     icon: RxReader,
+    id: "Seo",
     title: "Seo",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
   },
   {
     icon: RxAccessibility,
+    id: "Management",
     title: "Management",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
   },
   {
     icon: RxRocket,
+    id: "Production",
     title: "Production",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
