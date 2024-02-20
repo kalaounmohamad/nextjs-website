@@ -71,34 +71,34 @@ export default function CreateForm() {
   return (
     <form onSubmit={handleSubmit} className="bg-gray-100 w-full">
       {/* <form onSubmit={handleSubmit} className="bg-gray-100 w-full lg:w-10/12 "> */}
-      <label>
-        <span>Title:</span>
-        <input
-          required
-          type="text"
-          onChange={(e) => setTitle(e.target.value)}
-          value={title}
-          maxLength={200}
-        />
-      </label>
-      <label>
-        <span>Body:</span>
-        <textarea
-          required
-          onChange={(e) => setBody(e.target.value)}
-          value={body}
-          rows={5}
-        />
-      </label>
-      <label>
-        <span>Priority:</span>
-        <select onChange={(e) => setPriority(e.target.value)} value={priority}>
-          <option value="low">Low Priority</option>
-          <option value="medium">Medium Priority</option>
-          <option value="high">High Priority</option>
-        </select>
-      </label>
-      <button className="btn-primary" disabled={isLoading}>
+      <label for="title">Title:</label>
+      <input
+        id="title"
+        required
+        type="text"
+        onChange={(e) => setTitle(e.target.value)}
+        value={title}
+        maxLength={200}
+      />
+      <label for="body">Body:</label>
+      <textarea
+        id="body"
+        required
+        onChange={(e) => setBody(e.target.value)}
+        value={body}
+        rows={5}
+      />
+      <label for="priority">Priority:</label>
+      <select
+        id="priority"
+        onChange={(e) => setPriority(e.target.value)}
+        value={priority}
+      >
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button type="submit" className="btn-primary" disabled={isLoading}>
         {isLoading && <span>Adding...</span>}
         {!isLoading && <span>Add Ticket</span>}
       </button>
