@@ -24,7 +24,7 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
-    type: "mobile app",
+    type: "web app",
   },
   {
     icon: RxDesktop,

@@ -6,6 +6,7 @@ import FaqAccordion from "../components/FaqAccordion";
 export default function Projects() {
   const [smallScreen, setSmallScreen] = useState(false);
   const [selectedType, setSelectedType] = useState("all");
+  const [visibleProjects, setVisibleProjects] = useState(2);
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,6 +23,10 @@ export default function Projects() {
     selectedType === "all"
       ? ProjectsDetails
       : ProjectsDetails.filter((project) => project.type === selectedType);
+
+  const handleLoadMore = () => {
+    setVisibleProjects(filteredProjects.length);
+  };
 
   return (
     <main>
@@ -54,7 +59,7 @@ export default function Projects() {
         </button>
       </div>
       <div className="flex flex-col gap-5 mt-4">
-        {filteredProjects.map((item, index) => (
+        {filteredProjects.slice(0, visibleProjects).map((item, index) => (
           <div
             key={index}
             id={item.id}
@@ -99,6 +104,11 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      {visibleProjects < filteredProjects.length && (
+        <button className="btn-primary mx-auto mt-7" onClick={handleLoadMore}>
+          Load More
+        </button>
+      )}
       <FaqAccordion />
     </main>
   );
