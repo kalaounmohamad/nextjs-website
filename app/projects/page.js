@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <main>
-      <h1>Projects</h1>
+      <h1 className="text-3xl">Projects</h1>
       <div className="flex flex-col gap-5 mt-4">
         {ProjectsDetails.map((item, index) => (
           <div
@@ -41,12 +41,12 @@ export default function Projects() {
                         alt="Project Image"
                         layout="fill"
                         objectFit="cover"
-                        className="sm:rounded-xl  rounded-t-xl"
+                        className="rounded-xl"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col w-full sm:w-1/2 justify-center   rounded-xl px-6 py-8">
+                <div className="flex flex-col w-full sm:w-1/2 justify-center py-4 sm:px-6 sm:py-8">
                   <div className="mb-3 flex gap-5">
                     <item.icon className="text-green-400 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-3" />
                     <h1 className="text-xl lg:text-2xl mb-3">{item.title}</h1>
@@ -56,7 +56,7 @@ export default function Projects() {
               </>
             ) : (
               <>
-                <div className="flex flex-col w-full sm:w-1/2 justify-center  rounded-xl px-6 py-8">
+                <div className="flex flex-col w-full sm:w-1/2 justify-center  py-4 sm:px-6 sm:py-8">
                   <div className="mb-3 flex gap-5">
                     <item.icon className="text-green-400 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-3" />
                     <h1 className="text-xl lg:text-2xl mb-3">{item.title}</h1>
