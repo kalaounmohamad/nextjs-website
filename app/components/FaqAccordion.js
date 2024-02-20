@@ -26,9 +26,7 @@ export default function FaqAccordion() {
                 <BsChevronDown className="w-6 h-6" />
               )}
             </div>
-            {activeIndex === index && (
-              <p className="mt-2 text-gray-600">{faq.answer}</p>
-            )}
+            {activeIndex === index && <p className="mt-2 ">{faq.answer}</p>}
           </div>
         ))}
       </div>
