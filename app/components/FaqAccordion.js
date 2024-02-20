@@ -11,7 +11,7 @@ export default function FaqAccordion() {
 
   return (
     <main>
-      <h1 className="text-3xl pb-4 text-center">FAQs</h1>
+      <h1 className="text-3xl py-4 text-center">FAQs</h1>
       <div className="flex flex-col ">
         {faqs.map((faq, index) => (
           <div

@@ -26,17 +26,34 @@ export default function Projects() {
   return (
     <main>
       <h1 className="text-3xl text-center mb-7">Projects</h1>
-      {/* Filter dropdown */}
-      <div className="mb-5 text-right">
-        <select
-          value={selectedType}
-          onChange={(e) => setSelectedType(e.target.value)}
-          className="px-4 py-2 border rounded-md"
+
+      <div className="hidden sm:flex gap-5  my-4">
+        {/* On small screens I want a dropdown */}
+        {/* On larger screens I want buttons */}
+        <button
+          className={`btn-filter hover:opacity-75  ${
+            selectedType === "all" ? "btn-primary" : "btn-secondary"
+          } `}
+          onClick={() => setSelectedType("all")}
         >
-          <option value="all">All</option>
-          <option value="mobile app">Mobile App</option>
-          <option value="web app">Web App</option>
-        </select>
+          All
+        </button>
+        <button
+          className={`btn-filter hover:opacity-75 ${
+            selectedType === "mobile app" ? "btn-primary" : "btn-secondary"
+          }`}
+          onClick={() => setSelectedType("mobile app")}
+        >
+          Mobile App
+        </button>
+        <button
+          className={`btn-filter hover:opacity-75 ${
+            selectedType === "web app" ? "btn-primary" : "btn-secondary"
+          }`}
+          onClick={() => setSelectedType("web app")}
+        >
+          Web App
+        </button>
       </div>
       <div className="flex flex-col gap-5 mt-4">
         {filteredProjects.map((item, index) => (
