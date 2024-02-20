@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { ProjectsDetails } from "../constants/projects_details";
-import Accordion from "../components/Accordion";
+import FaqAccordion from "../components/FaqAccordion";
 
 export default function Projects() {
   const [smallScreen, setSmallScreen] = useState(false);
@@ -27,7 +27,7 @@ export default function Projects() {
           <div
             key={index}
             id={item.id}
-            className={`flex flex-col sm:flex-row items-stretch sm:gap-5  p-2 rounded-lg`}
+            className={`flex flex-col sm:flex-row items-stretch sm:gap-5  rounded-lg`}
           >
             {index % 2 === 0 || smallScreen ? (
               <>
@@ -81,7 +81,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <Accordion />
+      <FaqAccordion />
     </main>
   );
 }
