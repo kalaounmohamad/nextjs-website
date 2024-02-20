@@ -12,11 +12,11 @@ export default function FaqAccordion() {
   return (
     <main>
       <h1 className="text-3xl py-4 text-center">FAQs</h1>
-      <div className="flex flex-col border-b-2 border-gray-300">
+      <div className="flex flex-col border-2 divide-y-2 divide-gray-200">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`p-4 cursor-pointer border-2 border-b-0 border-gray-300 ${
+            className={`p-4 cursor-pointer  ${
               activeIndex === index ? "bg-white" : ""
             } hover:bg-white transition duration-300`}
             onClick={() => toggleAccordion(index)}
