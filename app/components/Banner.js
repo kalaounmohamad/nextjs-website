@@ -10,7 +10,7 @@ export default function Banner() {
         height: bannerHeight,
       }}
     >
-      <h1 className="text-white text-4xl font-bold mb-4 text-center backdrop-blur-md p-2 rounded-xl">
+      <h1 className="text-white text-4xl font-bold  text-center backdrop-blur-md p-2 rounded-xl">
         Tickets Management
       </h1>
       <button className="bg-white text-primary ">Learn More</button>

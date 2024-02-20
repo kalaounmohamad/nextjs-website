@@ -29,7 +29,7 @@ export default function Tickets() {
   return (
     <div>
       <select
-        className="btn-filter  mt-4 p-2 cursor-pointer"
+        className="btn-filter flex ml-auto mt-4 p-2 cursor-pointer"
         value={selectedPriority}
         onChange={(e) => setSelectedPriority(e.target.value)}
       >
