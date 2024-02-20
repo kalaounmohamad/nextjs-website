@@ -18,7 +18,6 @@ export default function Projects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Filter projects based on selected type
   const filteredProjects =
     selectedType === "all"
       ? ProjectsDetails
