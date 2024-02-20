@@ -11,14 +11,14 @@ export default function FaqAccordion() {
 
   return (
     <main>
-      <h1 className="text-3xl mb-4">FAQs</h1>
-      <div className="flex flex-col gap-4">
+      <h1 className="text-3xl pb-4 text-center">FAQs</h1>
+      <div className="flex flex-col ">
         {faqs.map((faq, index) => (
           <div
             key={index}
             className={`p-4 cursor-pointer border-2 border-gray-300 ${
-              activeIndex === index ? "bg-white" : "hover:bg-white"
-            }`}
+              activeIndex === index ? "bg-white" : ""
+            } hover:bg-white transition duration-300`}
             onClick={() => toggleAccordion(index)}
           >
             <div className="flex justify-between items-center  transition-all duration-300 ">

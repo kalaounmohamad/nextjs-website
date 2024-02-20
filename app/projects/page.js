@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <main>
-      <h1 className="text-3xl">Projects</h1>
+      <h1 className="text-3xl text-center">Projects</h1>
       <div className="flex flex-col gap-5 mt-4">
         {ProjectsDetails.map((item, index) => (
           <div
@@ -31,21 +31,14 @@ export default function Projects() {
           >
             {index % 2 === 0 || smallScreen ? (
               <>
-                <div className="w-full sm:w-1/2  flex justify-center items-center">
-                  <div className="relative w-full pt-[56.25%] sm:pt-[100%] lg:pt-[56.25%]">
-                    {/*Here I specified at some cases 16:9 aspect ratio */}
-
-                    <div className="absolute inset-0">
-                      <Image
-                        src={item.backgroundImage}
-                        alt="Project Image"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-xl"
-                      />
-                    </div>
-                  </div>
+                <div className="w-full sm:w-1/2 flex justify-center items-center ">
+                  <img
+                    src={item.backgroundImage}
+                    alt="Project Image"
+                    className="rounded-xl"
+                  />
                 </div>
+
                 <div className="flex flex-col w-full sm:w-1/2 justify-center py-4 sm:px-6 sm:py-8">
                   <div className="mb-3 flex gap-5">
                     <item.icon className="text-green-400 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 mb-3" />
@@ -63,18 +56,12 @@ export default function Projects() {
                   </div>
                   <p className="lg:text-lg">{item.content}</p>
                 </div>
-                <div className="w-full sm:w-1/2 relative ">
-                  <div className="w-full pt-[56.25%] sm:pt-[100%] lg:pt-[56.25%] ">
-                    <div className="absolute inset-0">
-                      <Image
-                        src={item.backgroundImage}
-                        alt="Project Image"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-xl"
-                      />
-                    </div>
-                  </div>
+                <div className="w-full sm:w-1/2 flex justify-center items-center ">
+                  <img
+                    src={item.backgroundImage}
+                    alt="Project Image"
+                    className="rounded-xl"
+                  />
                 </div>
               </>
             )}
