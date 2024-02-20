@@ -36,7 +36,7 @@ export default function Projects() {
     <main>
       <h1 className="text-3xl text-center mb-7">Projects</h1>
 
-      <div className="flex gap-5  my-4">
+      <div className="flex flex-wrap gap-5  my-4">
         <button
           className={`btn-filter hover:opacity-75  ${
             selectedType === "all" ? "btn-primary" : "btn-secondary"
@@ -109,7 +109,10 @@ export default function Projects() {
         ))}
       </div>
       {visibleProjects < filteredProjects.length && (
-        <button className="btn-primary mx-auto mt-7" onClick={handleLoadMore}>
+        <button
+          className="btn-primary text-lg mx-auto mt-6 sm:mt-12 sm:py-2 px-7"
+          onClick={handleLoadMore}
+        >
           Load More
         </button>
       )}
