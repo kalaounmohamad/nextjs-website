@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CreateTicket() {
   return (
-    <main className="my-0 ">
+    <main>
       <div className="  mx-auto ">
         <h2 className="text-primary text-center">Add a new ticket</h2>
       </div>

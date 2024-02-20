@@ -23,9 +23,9 @@ export default function Tickets() {
       {/* Render the modal content conditionally */}
       {showModal && (
         <div className="fixed z-50 inset-0  bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-gray-100 rounded-lg mx-auto w-full sm:w-11/12 md:w-3/4 lg:w-1/2">
+          <div className="relative bg-gray-100 rounded-lg mx-auto w-full sm:w-11/12 md:w-3/4 lg:w-1/2">
             <button
-              className="flex text-primary ml-auto text-xl font-bold hover:opacity-50 pr-7 pt-7"
+              className="absolute text-primary ml-auto text-xl font-bold hover:opacity-50 top-4 right-4"
               onClick={() => setShowModal(false)}
             >
               ✕
