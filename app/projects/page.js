@@ -19,6 +19,10 @@ export default function Projects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    setVisibleProjects(2);
+  }, [selectedType]);
+
   const filteredProjects =
     selectedType === "all"
       ? ProjectsDetails
