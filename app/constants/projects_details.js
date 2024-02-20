@@ -15,6 +15,7 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
+    type: "mobile app",
   },
   {
     icon: RxPencil2,
@@ -23,6 +24,7 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
+    type: "mobile app",
   },
   {
     icon: RxDesktop,
@@ -31,6 +33,7 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
+    type: "web app",
   },
   {
     icon: RxReader,
@@ -39,6 +42,7 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
+    type: "web app",
   },
   {
     icon: RxAccessibility,
@@ -47,6 +51,7 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity5.jpeg",
+    type: "web app",
   },
   {
     icon: RxRocket,
@@ -55,5 +60,6 @@ export const ProjectsDetails = [
     content:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore beatae natus ab similique ad excepturi, atque in? Quibusdam consequuntur quo illum eligendi at, aspernatur dolorum architecto vitae, facere maxime voluptatum?",
     backgroundImage: "/SwiperImg/SpaceCity1.jpg",
+    type: "mobile app",
   },
 ];
