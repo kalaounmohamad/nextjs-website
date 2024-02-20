@@ -54,17 +54,19 @@ export default function SwiperComponent() {
 
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
                 <div className="relative flex flex-col gap-3 h-full">
-                  <item.icon className="text-white group-hover:text-green-400 w-8 h-8" />
-                  <h1 className="text-white text-xl lg:text-2xl">
-                    {item.title}
-                  </h1>
-                  <p className="sm:absolute sm:top-1/2  sm:-translate-y-1/2 lg:text-lg my-auto ">
-                    {/* <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-lg "> */}
+                  <item.icon className="text-white group-hover:text-green-400 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 " />
+                  <div className="absolute top-1/2  -translate-y-1/2 ">
+                    <h1 className="text-white text-xl lg:text-2xl">
+                      {item.title}
+                    </h1>
+                    <p className=" lg:text-lg leading-5 md:leading-6 lg:leading-7  ">
+                      {/* <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-lg "> */}
 
-                    {item.content}
-                  </p>
+                      {item.content}
+                    </p>
+                  </div>
                 </div>
-                <RxArrowTopRight className="absolute bottom-5 left-5 w-9 h-9 text-white group-hover:text-green-500 group-hover:rotate-45 duration-100" />
+                <RxArrowTopRight className="absolute bottom-5 left-5 w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9  text-white group-hover:text-green-500 group-hover:rotate-45 duration-100" />
               </div>
             </SwiperSlide>
           ))}
