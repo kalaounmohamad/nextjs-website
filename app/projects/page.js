@@ -27,9 +27,7 @@ export default function Projects() {
     <main>
       <h1 className="text-3xl text-center mb-7">Projects</h1>
 
-      <div className="hidden sm:flex gap-5  my-4">
-        {/* On small screens I want a dropdown */}
-        {/* On larger screens I want buttons */}
+      <div className="flex gap-5  my-4">
         <button
           className={`btn-filter hover:opacity-75  ${
             selectedType === "all" ? "btn-primary" : "btn-secondary"
