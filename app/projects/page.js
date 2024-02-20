@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { ProjectsDetails } from "../constants/projects_details";
 import FaqAccordion from "../components/FaqAccordion";
 
@@ -10,7 +9,7 @@ export default function Projects() {
 
   useEffect(() => {
     const handleResize = () => {
-      setSmallScreen(window.innerWidth < 640); // Set the threshold for small screen width
+      setSmallScreen(window.innerWidth < 640);
     };
 
     handleResize();
