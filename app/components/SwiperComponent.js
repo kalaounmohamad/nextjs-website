@@ -56,7 +56,7 @@ export default function SwiperComponent() {
                 <div className="relative flex flex-col gap-3 h-full">
                   <item.icon className="text-white group-hover:text-green-400 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 " />
                   <div className="absolute top-1/2  -translate-y-1/2 ">
-                    <h1 className="text-white text-xl lg:text-2xl">
+                    <h1 className="text-white text-xl lg:text-2xl mb-3">
                       {item.title}
                     </h1>
                     <p className=" lg:text-lg leading-5 md:leading-6 lg:leading-7  ">
